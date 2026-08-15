@@ -69,9 +69,18 @@ workflows:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
     publishing:
+      email:
+        recipients:
+          - dprobaos@gmail.com
+        notify:
+          success: true
+          failure: true
       app_store_connect:
         auth: integration
-        # Só faz upload (build fica disponível p/ teste INTERNO sem revisão).
-        # Para teste externo, preencha as "Test Information" no App Store
-        # Connect e mude para true.
-        submit_to_testflight: false
+        # Manda para o TestFlight já submetendo o Beta App Review, para os
+        # testadores EXTERNOS não ficarem presos num build antigo.
+        submit_to_testflight: true
+        # A distribuição para TODOS os grupos externos é feita pelo
+        # codemagic-runner (asc_distribute.mjs), que descobre os grupos pela
+        # API — assim não é preciso repetir nomes de grupo aqui.
+        expire_build_submitted_for_review: true
