@@ -1,0 +1,54 @@
+# ================================================================
+#  project.yml — Spec do XcodeGen (gera CicloApp.xcodeproj sem Mac)
+#  O Codemagic roda `xcodegen generate` e builda → TestFlight.
+#  Target único: casca WebView + Face ID do Ciclo a Dois.
+# ================================================================
+name: CicloApp
+options:
+  bundleIdPrefix: com.dprobaos
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: "4P5D9V48GJ"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    GENERATE_INFOPLIST_FILE: YES
+
+targets:
+  CicloApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: CicloApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dprobaos.cicloadois
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: CicloApp/Info.plist
+      properties:
+        CFBundleDisplayName: "Ciclo a Dois"
+        NSFaceIDUsageDescription: "Usamos o Face ID para você entrar no app com rapidez e manter seus dados de saúde protegidos."
+        ITSAppUsesNonExemptEncryption: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+
+schemes:
+  CicloApp:
+    build:
+      targets:
+        CicloApp: all
+    archive:
+      config: Release
