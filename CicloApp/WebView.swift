@@ -1,4 +1,4 @@
-//  WebView.swift — WKWebView do Ciclo a Dois "endurecida" para virar app:
+//  WebView.swift — WKWebView do V|D "endurecida" para virar app:
 //   - JavaScript + localStorage (sessão de 30 dias do JWT)
 //   - Diálogos JS (alert/confirm/prompt) nativos
 //   - Ponte JS→nativo para Face ID (messageHandlers.app)

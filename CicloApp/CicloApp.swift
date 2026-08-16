@@ -1,4 +1,4 @@
-//  CicloApp.swift — casca iOS do Ciclo a Dois (WebView + Face ID).
+//  CicloApp.swift — casca iOS do V|D (WebView + Face ID).
 //  Target único (iOS 15+). Espelha o app web em produção, então toda
 //  atualização do site aparece aqui sem precisar de novo build.
 

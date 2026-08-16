@@ -1,4 +1,4 @@
-//  BiometriaManager.swift — login por Face ID / Touch ID no Ciclo a Dois.
+//  BiometriaManager.swift — login por Face ID / Touch ID no V|D.
 //
 //  Modelo do Bolão (e NÃO o do LocaCobrança): o servidor emite um TOKEN
 //  persistente (`auth.php?action=bio-enable`) e nós guardamos só esse token
@@ -56,7 +56,7 @@ final class BiometriaManager {
     // ---- Entrar ----
     func login(webView: WKWebView?) {
         guard ativado else { return }
-        lerToken(motivo: "Entrar no Ciclo a Dois") { token in
+        lerToken(motivo: "Entrar no V|D") { token in
             guard let token = token, let wv = webView else { return }
             let seguro = token.replacingOccurrences(of: "\\", with: "\\\\")
                               .replacingOccurrences(of: "'", with: "\\'")

@@ -1,6 +1,6 @@
-# Ciclo a Dois — App iOS (casca WebView + Face ID)
+# V|D — App iOS (casca WebView + Face ID)
 
-Embrulha o **Ciclo a Dois** web (https://neurovoice.com.br/ciclo/) numa casca nativa,
+Embrulha o **V|D** web (https://neurovoice.com.br/ciclo/) numa casca nativa,
 publicada no **TestFlight** via Codemagic (sem precisar de Mac).
 
 Como é uma casca WebView, **toda atualização do site aparece no app automaticamente** —
@@ -37,7 +37,7 @@ Live Activity do Bolão).
 ## Pré-requisitos (reaproveitando o que já existe)
 
 - **App Store Connect:** criar app com bundle **`com.dprobaos.cicloadois`**
-  (nome "Ciclo a Dois"). Categoria: Saúde e fitness.
+  (nome "V|D"). Categoria: Saúde e fitness.
 - **Codemagic:**
   - Integração App Store Connect **"NeuroVoice ASC"** (a mesma dos outros apps).
   - Grupo de variáveis **`ios_signing`** com `CM_CERTIFICATE_PRIVATE_KEY`.
@@ -52,7 +52,7 @@ Live Activity do Bolão).
    ⚠️ **O iOS builda do Git remoto**: edição local só entra depois de commit + push.
 2. Crie o app no App Store Connect com o bundle acima.
 3. No Codemagic, conecte o repositório e confirme a integração e o grupo de variáveis.
-4. Rode o workflow **"Ciclo a Dois iOS (TestFlight)"** (ou dê push na `main`).
+4. Rode o workflow **"V|D iOS (TestFlight)"** (ou dê push na `main`).
 5. O build sobe para o TestFlight (**teste interno** sai sem revisão). Para teste
    externo, preencha as "Test Information" e troque `submit_to_testflight: false → true`.
 

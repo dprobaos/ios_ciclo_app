@@ -1,5 +1,5 @@
 # ================================================================
-#  codemagic.yaml — Build iOS do Ciclo a Dois SEM MAC LOCAL.
+#  codemagic.yaml — Build iOS do V|D SEM MAC LOCAL.
 #  O Codemagic gera o projeto Xcode via XcodeGen (project.yml) e
 #  builda → TestFlight. Você nunca precisa abrir o Xcode.
 #
@@ -20,7 +20,7 @@
 # ================================================================
 workflows:
   ios-ciclo:
-    name: Ciclo a Dois iOS (TestFlight)
+    name: V|D iOS (TestFlight)
     triggering:
       events:
         - push

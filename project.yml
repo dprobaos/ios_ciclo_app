@@ -1,7 +1,7 @@
 # ================================================================
 #  project.yml — Spec do XcodeGen (gera CicloApp.xcodeproj sem Mac)
 #  O Codemagic roda `xcodegen generate` e builda → TestFlight.
-#  Target único: casca WebView + Face ID do Ciclo a Dois.
+#  Target único: casca WebView + Face ID do V|D.
 # ================================================================
 name: CicloApp
 options:
@@ -34,7 +34,7 @@ targets:
     info:
       path: CicloApp/Info.plist
       properties:
-        CFBundleDisplayName: "Ciclo a Dois"
+        CFBundleDisplayName: "V|D"
         NSFaceIDUsageDescription: "Usamos o Face ID para você entrar no app com rapidez e manter seus dados de saúde protegidos."
         ITSAppUsesNonExemptEncryption: false
         UISupportedInterfaceOrientations:
