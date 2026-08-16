@@ -83,4 +83,7 @@ workflows:
         # A distribuição para TODOS os grupos externos é feita pelo
         # codemagic-runner (asc_distribute.mjs), que descobre os grupos pela
         # API — assim não é preciso repetir nomes de grupo aqui.
-        expire_build_submitted_for_review: true
+        #
+        # ⚠️ NÃO use `expire_build_submitted_for_review: true` aqui: ele expira
+        # o build recém-enviado, que então SAI dos grupos do TestFlight e os
+        # testadores ficam NOT_INVITED. Aconteceu no build 3 (15/08/2026).
